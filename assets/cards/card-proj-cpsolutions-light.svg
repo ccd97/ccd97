@@ -1,0 +1,35 @@
+<svg width="100%" height="114" viewBox="0 0 415 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow-proj-cpsolutions-light" cx="390" cy="0" r="160" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1e51b8" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#1e51b8" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<style>
+  .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+</style>
+  <rect width="415" height="114" rx="8" fill="#fafafa" stroke="#e0e0e0" stroke-width="1"/>
+  <rect width="415" height="114" rx="8" fill="url(#glow-proj-cpsolutions-light)"/>
+  <text x="20" y="28" fill="#121212" font-size="15" font-weight="600" class="serif">CP Solutions</text>
+  <rect x="327" y="15" width="68" height="20" rx="5" fill="#1e51b8"/>
+  <text x="361.0" y="25.0" text-anchor="middle" dominant-baseline="central" fill="#ffffff" font-size="8.5" font-weight="600" class="mono">Live App ↗</text>
+  <text x="20" y="48" fill="#383838" font-size="11.2" class="sans">Explorer for competitive programming solutions across</text>
+  <text x="20" y="63" fill="#383838" font-size="11.2" class="sans">LeetCode, Codeforces, HackerRank, and CodeChef.</text>
+    <rect x="20" y="80" width="39" height="19" rx="4" fill="rgba(30, 81, 184, 0.08)" stroke="rgba(30, 81, 184, 0.25)" stroke-width="1"/>
+    <text x="39.5" y="90.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="8.5" font-weight="500" class="mono">Java</text>
+    <rect x="65" y="80" width="51" height="19" rx="4" fill="rgba(30, 81, 184, 0.08)" stroke="rgba(30, 81, 184, 0.25)" stroke-width="1"/>
+    <text x="90.5" y="90.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="8.5" font-weight="500" class="mono">Python</text>
+    <rect x="122" y="80" width="33" height="19" rx="4" fill="rgba(30, 81, 184, 0.08)" stroke="rgba(30, 81, 184, 0.25)" stroke-width="1"/>
+    <text x="138.5" y="90.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="8.5" font-weight="500" class="mono">DSA</text>
+  <rect x="331" y="80" width="64" height="19" rx="4" fill="#f0f0f2" stroke="#dcdce0" stroke-width="1"/>
+  <g transform="translate(338, 84.5) scale(0.65)">
+    <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="#6b6b6b"/>
+  </g>
+  <text x="351" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">1</text>
+  <g transform="translate(364, 84.5) scale(0.65)">
+    <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3 6.25v-.878a2.25 2.25 0 1 1 2 0ZM3.25 3.5a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0ZM7.25 13a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z" fill="#6b6b6b"/>
+  </g>
+  <text x="377" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">0</text>
+</svg>

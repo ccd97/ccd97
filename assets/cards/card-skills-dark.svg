@@ -1,0 +1,34 @@
+<svg width="100%" height="166" viewBox="0 0 850 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow-skills-dark" cx="800" cy="0" r="180" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#5c8beb" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#5c8beb" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<style>
+  .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+</style>
+  <rect width="850" height="166" rx="8" fill="#18181b" stroke="#26262b" stroke-width="1"/>
+  <rect width="850" height="166" rx="8" fill="url(#glow-skills-dark)"/>
+  <circle cx="26" cy="24" r="3" fill="#5c8beb"/>
+  <text x="38" y="27" fill="#5c8beb" font-size="9.5" font-weight="600" class="mono" letter-spacing="1.2">LANGUAGES</text>
+  <text x="180" y="27" fill="#e9e6e2" font-size="11" class="mono" xml:space="preserve">Python  ·  Java  ·  C++  ·  TypeScript  ·  JavaScript  ·  SQL</text>
+  <line x1="20" y1="46" x2="830" y2="46" stroke="#26262b" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <circle cx="26" cy="52" r="3" fill="#5c8beb"/>
+  <text x="38" y="55" fill="#5c8beb" font-size="9.5" font-weight="600" class="mono" letter-spacing="1.2">BACKEND &amp; ARCH</text>
+  <text x="180" y="55" fill="#e9e6e2" font-size="11" class="mono" xml:space="preserve">Distributed Systems  ·  Agentic Systems  ·  Microservices  ·  Event-Driven  ·  REST APIs  ·  Spring</text>
+  <line x1="20" y1="74" x2="830" y2="74" stroke="#26262b" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <circle cx="26" cy="80" r="3" fill="#5c8beb"/>
+  <text x="38" y="83" fill="#5c8beb" font-size="9.5" font-weight="600" class="mono" letter-spacing="1.2">GEN-AI &amp; ML</text>
+  <text x="180" y="83" fill="#e9e6e2" font-size="11" class="mono" xml:space="preserve">LLMs  ·  AWS Bedrock  ·  AgentCore  ·  RAG  ·  LangChain  ·  PyTorch  ·  TensorFlow</text>
+  <line x1="20" y1="102" x2="830" y2="102" stroke="#26262b" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <circle cx="26" cy="108" r="3" fill="#5c8beb"/>
+  <text x="38" y="111" fill="#5c8beb" font-size="9.5" font-weight="600" class="mono" letter-spacing="1.2">AWS &amp; GCP</text>
+  <text x="180" y="111" fill="#e9e6e2" font-size="11" class="mono" xml:space="preserve">Lambda  ·  ECS  ·  DynamoDB  ·  EventBridge  ·  SQS / SNS  ·  Vertex AI  ·  GKE  ·  Cloud SQL</text>
+  <line x1="20" y1="130" x2="830" y2="130" stroke="#26262b" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <circle cx="26" cy="136" r="3" fill="#5c8beb"/>
+  <text x="38" y="139" fill="#5c8beb" font-size="9.5" font-weight="600" class="mono" letter-spacing="1.2">TOOLING &amp; PRACTICE</text>
+  <text x="180" y="139" fill="#e9e6e2" font-size="11" class="mono" xml:space="preserve">Docker  ·  Kubernetes  ·  Git  ·  CI/CD Pipelines  ·  Spinnaker  ·  Gradle  ·  Canary Testing</text>
+</svg>

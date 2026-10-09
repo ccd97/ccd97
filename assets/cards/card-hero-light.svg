@@ -1,0 +1,21 @@
+<svg width="100%" height="148" viewBox="0 0 850 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow-hero-light" cx="800" cy="0" r="280" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1e51b8" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#1e51b8" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<style>
+  .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+</style>
+  <rect width="850" height="148" rx="8" fill="#fafafa" stroke="#e0e0e0" stroke-width="1"/>
+  <rect width="850" height="148" rx="8" fill="url(#glow-hero-light)"/>
+  <text x="28" y="52" fill="#121212" font-size="32" font-weight="600" class="serif">Cyprien Dcunha</text>
+  <text x="822" y="44" text-anchor="end" fill="#1e51b8" font-size="11" font-weight="600" class="mono">cyprien.in ↗</text>
+  <text x="28" y="86" fill="#121212" font-size="13" font-weight="400" class="sans">Senior SDE @ Salesforce ｜ Ex-Amazon ｜ Distributed &amp; Event-driven Systems, GenAI Automation, &amp; Cloud Infrastructure.</text>
+  <rect x="28" y="106" width="74" height="19" rx="4" fill="rgba(30, 81, 184, 0.08)" stroke="rgba(30, 81, 184, 0.25)" stroke-width="1"/>
+  <text x="65.0" y="116.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="9" font-weight="600" class="mono" letter-spacing="1">CURRENTLY</text>
+  <text x="114" y="116.0" dominant-baseline="central" fill="#6b6b6b" font-size="12" class="sans">Scaling AI Systems at Salesforce · Hyderabad, India</text>
+</svg>

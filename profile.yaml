@@ -1,0 +1,168 @@
+# ==============================================================================
+# Cyprien Dcunha · Profile Data Configuration
+# 
+# To update your GitHub Profile README and cards:
+# 1. Edit this file (add/remove/modify projects, experience, skills, contact).
+# 2. Run: python3 generate.py
+# Everything (SVGs and README.md) updates automatically!
+# ==============================================================================
+
+hero:
+  name: "Cyprien Dcunha"
+  website_text: "cyprien.in ↗"
+  website_url: "https://cyprien.in/"
+  headline: "Senior SDE @ Salesforce ｜ Ex-Amazon ｜ Distributed & Event-driven Systems, GenAI Automation, & Cloud Infrastructure."
+  status:
+    badge: "CURRENTLY"
+    text: "Scaling AI Systems at Salesforce · Hyderabad, India"
+
+experience:
+  header: "Experience"
+  items:
+    - company: "Salesforce"
+      team: "Hyperforce AI"
+      role: "Senior Software Engineer"
+      period: "Nov 2025 – Present"
+      location: "Hyderabad"
+      active: true
+    - company: "Amazon"
+      team: "Finance Automation"
+      role: "Software Development Engineer II"
+      period: "Dec 2021 – Nov 2025"
+      location: "Hyderabad"
+      active: false
+    - company: "Amazon"
+      team: "Finance Automation"
+      role: "Software Development Engineer I"
+      period: "May 2019 – Dec 2021"
+      location: "Hyderabad"
+      active: false
+    - company: "IRageCapital"
+      team: "High-Frequency Trading"
+      role: "C++ Development Intern"
+      period: "Jun 2017 – Aug 2017"
+      location: "Mumbai"
+      active: false
+
+projects:
+  header: "Side projects"
+  subtitle: ""
+  items:
+    - id: "proj-lld"
+      title: "LowLevelDesign.ai"
+      repo: "LowLevelDesign.ai"
+      desc:
+        - "Desktop app for low-level design interview practice —"
+        - "interviewer chatbot, workspace with local run & AI judge."
+      tags: ["AI-harness", "Electron", "LLMs", "TypeScript"]
+      badge: "Showcase ↗"
+      url: "https://cyprien.in/LowLevelDesign.ai/"
+
+    - id: "proj-sd"
+      title: "SystemDesign.ai"
+      repo: "SystemDesign.ai"
+      desc:
+        - "Desktop app turning Excalidraw into an AI-powered system"
+        - "design interview tool — real-time audio and canvas diff."
+      tags:  ["AI-harness", "Electron", "LLMs", "TypeScript"]
+      badge: "Showcase ↗"
+      url: "https://cyprien.in/SystemDesign.ai/"
+
+    - id: "proj-hellonn"
+      title: "Hello NN"
+      repo: "hello_nn"
+      desc:
+        - "Neural nets from scratch in Python — feedforward, CNN,"
+        - "RNN, autoencoders, Hopfield, and Boltzmann Machines."
+      tags: ["Python", "TensorFlow", "NumPy"]
+      badge: "GitHub Repo ↗"
+      url: "https://github.com/ccd97/hello_nn"
+
+    - id: "proj-voicetune"
+      title: "VoiceTune"
+      repo: "voicetune"
+      desc:
+        - "Pipeline turning personal audio call recordings into LoRA"
+        - "fine-tuning datasets for local LLMs; GCP fine-tunes."
+      tags: ["Python", "LoRA", "GCP", "LLMs"]
+      badge: "GitHub Repo ↗"
+      url: "https://github.com/ccd97/voicetune"
+
+    - id: "proj-cpsolutions"
+      title: "CP Solutions"
+      repo: "cp_solutions"
+      desc:
+        - "Explorer for competitive programming solutions across"
+        - "LeetCode, Codeforces, HackerRank, and CodeChef."
+      tags: ["Java", "Python", "DSA"]
+      badge: "Live App ↗"
+      url: "https://cyprien.in/cp_solutions/"
+
+    - id: "proj-cptest"
+      title: "CP Testing Framework"
+      repo: "CP-test"
+      desc:
+        - "Python tool that generates and diff-runs test cases for"
+        - "competitive programming across candidate solutions."
+      tags: ["Python", "CLI", "Testing"]
+      badge: "GitHub Repo ↗"
+      url: "https://github.com/ccd97/CP-test"
+
+    - id: "proj-imgclassify"
+      title: "Image Classify Server"
+      repo: "image-classify-server"
+      desc:
+        - "Django-backed image classification server using TensorFlow"
+        - "Inception v3 with upload and prediction endpoints."
+      tags: ["Python", "TensorFlow", "Django"]
+      badge: "GitHub Repo ↗"
+      url: "https://github.com/ccd97/image-classify-server"
+
+    - id: "proj-allrepos"
+      title: "All Repositories"
+      repo: "_all"
+      desc:
+        - "Archive of my open-source projects, tools,"
+        - "and experimental codebases on GitHub."
+      tags: ["Open Source"]
+      badge: "GitHub ↗"
+      url: "https://github.com/ccd97?tab=repositories"
+
+skills:
+  header: "Skills"
+  categories:
+    - name: "LANGUAGES"
+      lines:
+        - "Python · Java · C++ · TypeScript · JavaScript · SQL"
+    - name: "BACKEND & ARCH"
+      lines:
+        - "Distributed Systems · Agentic Systems · Microservices · Event-Driven · REST APIs · Spring"
+    - name: "GEN-AI & ML"
+      lines:
+        - "LLMs · AWS Bedrock · AgentCore · RAG · LangChain · PyTorch · TensorFlow"
+    - name: "AWS & GCP"
+      lines:
+        - "Lambda · ECS · DynamoDB · EventBridge · SQS / SNS · Vertex AI · GKE · Cloud SQL"
+    - name: "TOOLING & PRACTICE"
+      lines:
+        - "Docker · Kubernetes · Git · CI/CD Pipelines · Spinnaker · Gradle · Canary Testing"
+
+contact:
+  header: "Get in touch"
+  url: "https://cyprien.in/resume.html"
+  items:
+    - id: "contact-email"
+      label: "EMAIL"
+      value: "dcunha.cyprien@gmail.com"
+      url: "mailto:dcunha.cyprien@gmail.com"
+      icon: "email"
+    - id: "contact-linkedin"
+      label: "LINKEDIN"
+      value: "linkedin.com/in/ccd97"
+      url: "https://www.linkedin.com/in/ccd97"
+      icon: "linkedin"
+    - id: "contact-resume"
+      label: "RESUME"
+      value: "cyprien.in/resume.html"
+      url: "https://cyprien.in/resume.html"
+      icon: "resume"

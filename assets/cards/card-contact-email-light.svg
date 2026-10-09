@@ -1,0 +1,22 @@
+<svg width="100%" height="65" viewBox="0 0 415 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow-contact-email-light" cx="390" cy="0" r="140" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1e51b8" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#1e51b8" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<style>
+  .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+</style>
+  <rect width="415" height="60" rx="8" fill="#fafafa" stroke="#e0e0e0" stroke-width="1"/>
+  <rect width="415" height="60" rx="8" fill="url(#glow-contact-email-light)"/>
+  <g transform="translate(18, 22)">
+    <rect width="20" height="15" rx="3" fill="none" stroke="#1e51b8" stroke-width="1.3"/>
+    <path d="M2 3l8 5 8-5" stroke="#1e51b8" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="48" y="25" fill="#1e51b8" font-size="9" font-weight="600" class="mono" letter-spacing="1">EMAIL</text>
+  <text x="48" y="43" fill="#121212" font-size="12" class="sans">dcunha.cyprien@gmail.com</text>
+  <text x="395" y="34" text-anchor="end" fill="#1e51b8" font-size="11" class="mono">&#8599;</text>
+</svg>

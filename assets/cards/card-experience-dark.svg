@@ -1,0 +1,32 @@
+<svg width="100%" height="200" viewBox="0 0 415 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="glow-exp-dark" cx="390" cy="0" r="180" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#5c8beb" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#5c8beb" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<style>
+  .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+</style>
+  <rect width="415" height="200" rx="8" fill="#18181b" stroke="#26262b" stroke-width="1"/>
+  <rect width="415" height="200" rx="8" fill="url(#glow-exp-dark)"/>
+  <line x1="26" y1="27" x2="26" y2="150" stroke="#26262b" stroke-width="1.5"/>
+  <circle cx="26" cy="27" r="4.0" fill="#5c8beb"/>
+  <text x="40" y="28"><tspan fill="#5c8beb" font-size="12" font-weight="600" class="sans">Salesforce</tspan><tspan fill="#a6a096" font-size="10.5" font-weight="400" class="sans"> · Hyperforce AI</tspan></text>
+  <text x="395" y="28" text-anchor="end" fill="#a6a096" font-size="9.5" class="mono">Nov 2025 – Present</text>
+  <text x="40" y="43" fill="#cac5bd" font-size="11" class="sans">Senior Software Engineer</text>
+  <circle cx="26" cy="68" r="3.5" fill="#3f3f46"/>
+  <text x="40" y="69"><tspan fill="#e9e6e2" font-size="12" font-weight="600" class="sans">Amazon</tspan><tspan fill="#a6a096" font-size="10.5" font-weight="400" class="sans"> · Finance Automation</tspan></text>
+  <text x="395" y="69" text-anchor="end" fill="#a6a096" font-size="9.5" class="mono">Dec 2021 – Nov 2025</text>
+  <text x="40" y="84" fill="#cac5bd" font-size="11" class="sans">Software Development Engineer II</text>
+  <circle cx="26" cy="109" r="3.5" fill="#3f3f46"/>
+  <text x="40" y="110"><tspan fill="#e9e6e2" font-size="12" font-weight="600" class="sans">Amazon</tspan><tspan fill="#a6a096" font-size="10.5" font-weight="400" class="sans"> · Finance Automation</tspan></text>
+  <text x="395" y="110" text-anchor="end" fill="#a6a096" font-size="9.5" class="mono">May 2019 – Dec 2021</text>
+  <text x="40" y="125" fill="#cac5bd" font-size="11" class="sans">Software Development Engineer I</text>
+  <circle cx="26" cy="150" r="3.5" fill="#3f3f46"/>
+  <text x="40" y="151"><tspan fill="#e9e6e2" font-size="12" font-weight="600" class="sans">IRageCapital</tspan><tspan fill="#a6a096" font-size="10.5" font-weight="400" class="sans"> · High-Frequency Trading</tspan></text>
+  <text x="395" y="151" text-anchor="end" fill="#a6a096" font-size="9.5" class="mono">Jun 2017 – Aug 2017</text>
+  <text x="40" y="166" fill="#cac5bd" font-size="11" class="sans">C++ Development Intern</text>
+</svg>
