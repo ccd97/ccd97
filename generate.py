@@ -260,11 +260,13 @@ def build_hero(hero_data, theme):
 
 def build_experience(exp_data, theme):
     c = THEMES[theme]
-    w, h = 415, 200
+    # Native 850-wide banner: at README 100% width it renders ~1:1, so fonts
+    # read at their designed size (the old 415-wide card rendered 2x here).
+    w, h = 850, 216
     items = exp_data.get("items", [])
 
-    y_step = 41
-    start_y = 27
+    y_step = 48
+    start_y = 32
     line_end_y = start_y + (len(items) - 1) * y_step if items else start_y
 
     rows_svg = []
@@ -278,19 +280,21 @@ def build_experience(exp_data, theme):
         team = esc(item.get("team", ""))
         period = esc(item.get("period", ""))
         role = esc(item.get("role", ""))
+        location = esc(item.get("location", ""))
         muted_color = c["text_muted"]
-        team_tspan = f'<tspan fill="{muted_color}" font-size="10.5" font-weight="400" class="sans"> · {team}</tspan>' if team else ""
+        team_tspan = f'<tspan fill="{muted_color}" font-size="11" font-weight="400" class="sans"> · {team}</tspan>' if team else ""
 
-        rows_svg.append(f"""  <circle cx="26" cy="{cy}" r="{dot_r}" fill="{dot_color}"/>
-  <text x="40" y="{cy + 1}"><tspan fill="{company_color}" font-size="12" font-weight="600" class="sans">{company}</tspan>{team_tspan}</text>
-  <text x="395" y="{cy + 1}" text-anchor="end" fill="{c['text_muted']}" font-size="9.5" class="mono">{period}</text>
-  <text x="40" y="{cy + 16}" fill="{c['text_secondary']}" font-size="11" class="sans">{role}</text>""")
+        rows_svg.append(f"""  <circle cx="53" cy="{cy}" r="{dot_r}" fill="{dot_color}"/>
+  <text x="82" y="{cy + 1}"><tspan fill="{company_color}" font-size="14" font-weight="600" class="sans">{company}</tspan>{team_tspan}</text>
+  <text x="809" y="{cy + 1}" text-anchor="end" fill="{c['text_muted']}" font-size="10" class="mono">{period}</text>
+  <text x="82" y="{cy + 18}" fill="{c['text_secondary']}" font-size="12" class="sans">{role}</text>
+  <text x="809" y="{cy + 18}" text-anchor="end" fill="{c['text_muted']}" font-size="9" class="mono">{location}</text>""")
 
     content = "\n".join(rows_svg)
 
     svg = f"""<svg width="100%" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <radialGradient id="glow-exp-{theme}" cx="390" cy="0" r="180" gradientUnits="userSpaceOnUse">
+  <radialGradient id="glow-exp-{theme}" cx="800" cy="0" r="280" gradientUnits="userSpaceOnUse">
     <stop offset="0%" stop-color="{c['glow']}" stop-opacity="{c['glow_opacity']}"/>
     <stop offset="100%" stop-color="{c['glow']}" stop-opacity="0"/>
   </radialGradient>
@@ -298,38 +302,38 @@ def build_experience(exp_data, theme):
 <style>{FONTS_CSS}</style>
   <rect width="{w}" height="{h}" rx="8" fill="{c['card_bg']}" stroke="{c['border']}" stroke-width="1"/>
   <rect width="{w}" height="{h}" rx="8" fill="url(#glow-exp-{theme})"/>
-  <line x1="26" y1="{start_y}" x2="26" y2="{line_end_y}" stroke="{c['border']}" stroke-width="1.5"/>
+  <line x1="53" y1="{start_y}" x2="53" y2="{line_end_y}" stroke="{c['border']}" stroke-width="1.5"/>
 {content}
 </svg>"""
     save_svg(f"card-experience-{theme}.svg", svg)
 
-def build_contact_card(item, theme, is_last=False):
+def build_contact_card(item, theme):
     c = THEMES[theme]
-    w = 415
-    card_h = 60
-    canvas_h = card_h if is_last else card_h + 5
+    # Compact tile (415x90) for the 3-up contact strip. Content block is
+    # the original 60px card design shifted +15 to vertical center.
+    w, card_h, canvas_h = 415, 90, 90
     item_id = item.get("id", "contact")
     label = esc(item.get("label", ""))
     val = esc(item.get("value", ""))
     icon_type = item.get("icon", "email")
 
     if icon_type == "email":
-        icon_svg = f"""  <g transform="translate(18, 22)">
+        icon_svg = f"""  <g transform="translate(32, 34) scale(1.5)">
     <rect width="20" height="15" rx="3" fill="none" stroke="{c['accent']}" stroke-width="1.3"/>
     <path d="M2 3l8 5 8-5" stroke="{c['accent']}" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
   </g>"""
     elif icon_type == "linkedin":
-        icon_svg = f"""  <g transform="translate(18, 20)">
+        icon_svg = f"""  <g transform="translate(32, 32) scale(1.5)">
     <rect width="20" height="18" rx="3.5" fill="none" stroke="{c['accent']}" stroke-width="1.3"/>
     <path d="M5 8v6M5 5v.01M10 14v-4a2 2 0 0 1 4 0v4M10 10v4" stroke="{c['accent']}" stroke-width="1.3" stroke-linecap="round"/>
   </g>"""
     elif icon_type == "resume":
-        icon_svg = f"""  <g transform="translate(18, 20)">
+        icon_svg = f"""  <g transform="translate(32, 32) scale(1.5)">
     <path d="M2 1h9l4 4v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" fill="none" stroke="{c['accent']}" stroke-width="1.3"/>
     <path d="M11 1v4h4M5 9h6M5 13h7" stroke="{c['accent']}" stroke-width="1.3" stroke-linecap="round"/>
   </g>"""
     else:
-        icon_svg = f"""  <g transform="translate(18, 20)">
+        icon_svg = f"""  <g transform="translate(32, 32) scale(1.5)">
     <circle cx="10" cy="10" r="8" fill="none" stroke="{c['accent']}" stroke-width="1.3"/>
     <path d="M10 6v8M6 10h8" stroke="{c['accent']}" stroke-width="1.3" stroke-linecap="round"/>
   </g>"""
@@ -345,9 +349,9 @@ def build_contact_card(item, theme, is_last=False):
   <rect width="{w}" height="{card_h}" rx="8" fill="{c['card_bg']}" stroke="{c['border']}" stroke-width="1"/>
   <rect width="{w}" height="{card_h}" rx="8" fill="url(#glow-{item_id}-{theme})"/>
 {icon_svg}
-  <text x="48" y="25" fill="{c['accent']}" font-size="9" font-weight="600" class="mono" letter-spacing="1">{label}</text>
-  <text x="48" y="43" fill="{c['text_primary']}" font-size="12" class="sans">{val}</text>
-  <text x="395" y="34" text-anchor="end" fill="{c['accent']}" font-size="11" class="mono">&#8599;</text>
+  <text x="76" y="35" fill="{c['accent']}" font-size="11" font-weight="600" class="mono" letter-spacing="1">{label}</text>
+  <text x="76" y="63" fill="{c['text_primary']}" font-size="17.5" class="sans">{val}</text>
+  <text x="395" y="49" text-anchor="end" fill="{c['accent']}" font-size="11" class="mono">&#8599;</text>
 </svg>"""
     save_svg(f"card-{item_id}-{theme}.svg", svg)
 
@@ -364,19 +368,6 @@ def build_section_header(filename, title, subtitle, theme):
 <style>{FONTS_CSS}</style>
   <text x="4" y="22" fill="{c['text_primary']}" font-size="20" font-weight="500" class="serif">{title_escaped}</text>
   {sub_svg}
-</svg>"""
-    save_svg(f"{filename}-{theme}.svg", svg)
-
-def build_dual_section_header(filename, title_left, title_right, theme):
-    c = THEMES[theme]
-    w, h = 850, 32
-    left_esc = esc(title_left)
-    right_esc = esc(title_right)
-
-    svg = f"""<svg width="100%" height="{h}" viewBox="0 0 {w} {h}" fill="none" xmlns="http://www.w3.org/2000/svg">
-<style>{FONTS_CSS}</style>
-  <text x="4" y="22" fill="{c['text_primary']}" font-size="20" font-weight="500" class="serif">{left_esc}</text>
-  <text x="437" y="22" fill="{c['text_primary']}" font-size="20" font-weight="500" class="serif">{right_esc}</text>
 </svg>"""
     save_svg(f"{filename}-{theme}.svg", svg)
 
@@ -535,30 +526,38 @@ def build_readme(config):
     lines.append('<!-- HERO -->')
     hero_url = esc(hero.get("website_url", "https://cyprien.in/"))
     hero_name = esc(hero.get("name", "Cyprien Dcunha"))
-    lines.append(f'<p><a href="{hero_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-hero-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-hero-light.svg"><img src="assets/cards/card-hero-dark.svg" width="100%" alt="{hero_name}" /></picture></a></p>')
-    lines.append('<br/>\n')
+    lines.append(f'<p><a href="{hero_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-hero-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-hero-light.svg"><img src="assets/cards/card-hero-dark.svg" width="100%" alt="{hero_name}" /></picture></a></p>\n')
+    # No <br/> here: the paragraph margin alone (16px) sets the rhythm,
+    # matching every other section transition on the page.
 
-    # Experience & Contact
-    lines.append('<!-- EXPERIENCE & CONTACT -->')
-    lines.append('<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-experience-contact-intro-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-experience-contact-intro-light.svg"><img src="assets/cards/card-experience-contact-intro-dark.svg" width="100%" alt="Experience &amp; Get in touch" /></picture></p>\n')
-    p_exp = '<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-experience-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-experience-light.svg"><img src="assets/cards/card-experience-dark.svg" width="48.6%" align="left" alt="Experience - Salesforce & Amazon" /></picture>'
-    
-    contact_items = contact.get("items", [])
-    contact_pics = []
-    for item in contact_items:
-        c_id = item.get("id")
-        c_url = esc(item.get("url", "#"))
-        c_label = esc(item.get("label", ""))
-        target = ' target="_blank"' if not c_url.startswith("mailto:") else ''
-        contact_pics.append(f'<a href="{c_url}"{target}><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{c_id}-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{c_id}-light.svg"><img src="assets/cards/card-{c_id}-dark.svg" width="48.6%" alt="{c_label}" /></picture></a>')
-    
-    contact_html = "<br/>\n    ".join(contact_pics)
-    lines.append(f'<div>\n  {p_exp}\n  <div align="right">\n    {contact_html}\n  </div>\n</div>')
-    lines.append('<br clear="both"/>\n')
+    # Contact (3-up row under the hero) + Experience (full width below).
+    # All tiles are plain centered inline flow: no floats, no align
+    # attributes, so no GitHub align padding and no mobile failure modes.
+    # 3-up row totals 31.5+2+31.5+2+31.5 = 98.5% with zero whitespace
+    # (font-independent); experience spans 100% like hero/skills headers.
+    def tile_pic(card_id, alt, width):
+        return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{card_id}-dark.svg">'
+                f'<source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{card_id}-light.svg">'
+                f'<img src="assets/cards/card-{card_id}-dark.svg" width="{width}" alt="{alt}" /></picture>')
 
-    # Side Projects
-    lines.append('<!-- SIDE PROJECTS -->')
-    lines.append('<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-projects-intro-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-projects-intro-light.svg"><img src="assets/cards/card-projects-intro-dark.svg" width="100%" alt="Side Projects" /></picture></p>\n')
+    contact_by_id = {item.get("id"): item for item in contact.get("items", [])}
+
+    def contact_cell(c_id, width="31.5%"):
+        item = contact_by_id.get(c_id, {})
+        url = esc(item.get("url", "#"))
+        label = esc(item.get("label", ""))
+        target = ' target="_blank"' if not url.startswith("mailto:") else ''
+        return f'<a href="{url}"{target}>{tile_pic(c_id, label, width)}</a>'
+
+    lines.append('<!-- GET IN TOUCH -->')
+    gap = '<img src="assets/cards/spacer.svg" width="2%" alt="" />'
+    lines.append(f'<p align="center">{contact_cell("contact-email")}{gap}{contact_cell("contact-linkedin")}{gap}{contact_cell("contact-resume")}</p>\n')
+    # (Experience section removed.)
+    # (Experience header removed.)
+
+    # Projects
+    lines.append('<!-- PROJECTS -->')
+    lines.append('<p><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-projects-intro-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-projects-intro-light.svg"><img src="assets/cards/card-projects-intro-dark.svg" width="100%" alt="Projects" /></picture></p>\n')
 
     # Pair up project items 2 per row
     proj_items = projects.get("items", [])
@@ -568,17 +567,22 @@ def build_readme(config):
         c1_id = card1.get("id")
         c1_url = esc(card1.get("url", "#"))
         c1_title = esc(card1.get("title", ""))
-        p1 = f'<a href="{c1_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{c1_id}-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{c1_id}-light.svg"><img src="assets/cards/card-{c1_id}-dark.svg" width="48.6%" alt="{c1_title}" /></picture></a>'
+        p1 = f'<a href="{c1_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{c1_id}-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{c1_id}-light.svg"><img src="assets/cards/card-{c1_id}-dark.svg" width="48%" alt="{c1_title}" /></picture></a>'
 
         if len(row) > 1:
             card2 = row[1]
             c2_id = card2.get("id")
             c2_url = esc(card2.get("url", "#"))
             c2_title = esc(card2.get("title", ""))
-            p2 = f'<a href="{c2_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{c2_id}-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{c2_id}-light.svg"><img src="assets/cards/card-{c2_id}-dark.svg" width="48.6%" alt="{c2_title}" /></picture></a>'
-            lines.append(f'<p>{p1}&nbsp;&nbsp;&nbsp;&nbsp;{p2}</p>\n')
+            p2 = f'<a href="{c2_url}" target="_blank"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cards/card-{c2_id}-dark.svg"><source media="(prefers-color-scheme: light)" srcset="assets/cards/card-{c2_id}-light.svg"><img src="assets/cards/card-{c2_id}-dark.svg" width="48%" alt="{c2_title}" /></picture></a>'
+            # Gutter via 2% transparent spacer, elements fully adjacent:
+            # 48 + 2 + 48 = 98% — exact, collapsible-whitespace-free and
+            # font-independent (the old &nbsp; run overflowed on mobile).
+            # Centered paragraph absorbs the leftover 2% as even side insets.
+            gap = '<img src="assets/cards/spacer.svg" width="2%" alt="" />'
+            lines.append(f'<p align="center">{p1}{gap}{p2}</p>\n')
         else:
-            lines.append(f'<p>{p1}</p>\n')
+            lines.append(f'<p align="center">{p1}</p>\n')
 
     lines.append('<br/>\n')
 
@@ -621,22 +625,16 @@ def main():
         # Hero
         build_hero(config.get("hero", {}), theme)
         
-        # Experience & Contact Section
-        exp_header = config.get("experience", {}).get("header", "Experience")
-        contact_header = config.get("contact", {}).get("header", "Get in touch")
-        build_dual_section_header("card-experience-contact-intro", exp_header, contact_header, theme)
-        build_experience(config.get("experience", {}), theme)
+        # (Experience rendering removed; data stays in profile.yaml for easy restore.)
 
         # Contact (3 separate cards with individual links)
         contact_sec = config.get("contact", {})
-        c_items = contact_sec.get("items", [])
-        for idx, c_item in enumerate(c_items):
-            is_last = (idx == len(c_items) - 1)
-            build_contact_card(c_item, theme, is_last=is_last)
+        for c_item in contact_sec.get("items", []):
+            build_contact_card(c_item, theme)
         
         # Projects Section
         proj_sec = config.get("projects", {})
-        build_section_header("card-projects-intro", proj_sec.get("header", "Side projects"), proj_sec.get("subtitle", ""), theme)
+        build_section_header("card-projects-intro", proj_sec.get("header", "Projects"), proj_sec.get("subtitle", ""), theme)
         for proj in proj_sec.get("items", []):
             build_project_card(proj, theme)
 

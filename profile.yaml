@@ -45,7 +45,7 @@ experience:
       active: false
 
 projects:
-  header: "Side projects"
+  header: "Projects"
   subtitle: ""
   items:
     - id: "proj-lld"

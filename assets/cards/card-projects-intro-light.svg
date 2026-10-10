@@ -4,6 +4,6 @@
   .serif { font-family: Rasa, Georgia, "Times New Roman", serif; }
   .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
 </style>
-  <text x="4" y="22" fill="#121212" font-size="20" font-weight="500" class="serif">Side projects</text>
+  <text x="4" y="22" fill="#121212" font-size="20" font-weight="500" class="serif">Projects</text>
   
 </svg>
