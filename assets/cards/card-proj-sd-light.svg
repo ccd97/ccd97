@@ -25,13 +25,13 @@
     <text x="191.5" y="90.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="8.5" font-weight="500" class="mono">LLMs</text>
     <rect x="217" y="80" width="76" height="19" rx="4" fill="rgba(30, 81, 184, 0.08)" stroke="rgba(30, 81, 184, 0.25)" stroke-width="1"/>
     <text x="255.0" y="90.0" text-anchor="middle" dominant-baseline="central" fill="#1e51b8" font-size="8.5" font-weight="500" class="mono">TypeScript</text>
-  <rect x="331" y="80" width="64" height="19" rx="4" fill="#f0f0f2" stroke="#dcdce0" stroke-width="1"/>
-  <g transform="translate(338, 84.5) scale(0.65)">
+  <rect x="324" y="80" width="71" height="19" rx="4" fill="#f0f0f2" stroke="#dcdce0" stroke-width="1"/>
+  <g transform="translate(331, 84.5) scale(0.65)">
     <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="#6b6b6b"/>
   </g>
-  <text x="351" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">9</text>
-  <g transform="translate(364, 84.5) scale(0.65)">
+  <text x="344" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">10</text>
+  <g transform="translate(363, 84.5) scale(0.65)">
     <path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3 6.25v-.878a2.25 2.25 0 1 1 2 0ZM3.25 3.5a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Zm8 0a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0ZM7.25 13a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z" fill="#6b6b6b"/>
   </g>
-  <text x="377" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">0</text>
+  <text x="376" y="90.0" dominant-baseline="central" fill="#383838" font-size="9" font-weight="500" class="mono">0</text>
 </svg>
